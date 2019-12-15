@@ -1,4 +1,5 @@
 pragma solidity^0.4.25;
+pragma experimental ABIEncoderV2;
 
 contract CampaignFactory {
     address[] public deployedCampaigns;
@@ -22,9 +23,9 @@ contract Campaign {
         bool complete;
         uint approvalCount;
         mapping(address => bool) approvals;
-
     }
 
+    
     Request[] public requests;
     address public manager;
     uint public minimumContribution;

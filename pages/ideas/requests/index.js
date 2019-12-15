@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Button, Table } from 'semantic-ui-react';
+import { Button, Table, Divider} from 'semantic-ui-react';
 import { Link } from '../../../routes';
-import Layout from '../../../components/Layout';
+import Layout from '../../../components/HOC/Layout';
 import RequestRow from '../../../components/RequestRow';
 import Idea from '../../../ethereum/ideas';
 
@@ -40,6 +40,10 @@ class Index extends Component {
     const { Header, Row, HeaderCell, Body } = Table;
     return(
       <Layout>
+        <Link route={`/ideas/${this.props.address}`}>
+          <Button content='Back to Idea' icon='left arrow' labelPosition='left' />
+        </Link>
+        <Divider />
         <h3>List of Requests</h3>
         <Link route={`/ideas/${this.props.address}/requests/new`}>
           <a>

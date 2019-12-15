@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Form, Input, Message, Button } from 'semantic-ui-react';
+import { Form, Input, Message, Button, Icon } from 'semantic-ui-react';
 import Idea from '../ethereum/ideas';
 import web3 from '../ethereum/web3';
 import { Router } from '../routes';
@@ -34,7 +34,7 @@ class Contribute extends Component {
     return (
       <Form error={!!this.state.errorMessage} onSubmit={this.onSubmit}>
         <Form.Field>
-          <label>Amount to Contribute</label>
+          <label>Ether to Contribute</label>
           <Input
             value={this.state.value}
             onChange={event => this.setState({value: event.target.value})}
@@ -42,7 +42,7 @@ class Contribute extends Component {
             labelPosition="right"
           />
           <Message error header="Something went wrong with the transaction!" content={this.state.errorMessage} />
-          <Button primary loading={this.state.loading}>Contribute</Button>
+          <Button primary loading={this.state.loading}>Contribute <Icon name="ethereum"/></Button>
         </Form.Field>
       </Form>
     );

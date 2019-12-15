@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Card, Grid, Button } from 'semantic-ui-react';
-import Layout from '../../components/Layout';
+import { Card, Grid, Button, Icon, Divider } from 'semantic-ui-react';
+import Layout from '../../components/HOC/Layout';
 import Idea from '../../ethereum/ideas';
 import web3 from '../../ethereum/web3';
 import Contribute from '../../components/ContributeForm';
@@ -19,6 +19,23 @@ class IdeaShow extends Component {
       approversCount: summary[3],
       manager: summary[4]
     };
+  }
+
+  componentWillMount() {
+    this.getTimestamp();
+  }
+
+
+  getTimestamp = async () => {
+    const tx = await web3.eth.getCoinbase(); // tx hash
+    const blockNumberFromChain = await web3.eth.getBlockNumber() // get blockNUmber
+    console.log(blockNumberFromChain);
+    const BlockObject = await web3.eth.getBlock(blockNumberFromChain).then(
+      console.log
+
+    );
+
+    // *TODO* GET PROPERTIES FROM BLOCKOBJECT DOES NOT SEEM TO WORK
   }
 
   renderCards() {
@@ -62,16 +79,26 @@ class IdeaShow extends Component {
   }
 
   render() {
+
+    const style = {
+      marginTop: "10px"
+    }
+
     return (
       <Layout>
-        <h3>Information about about this idea</h3>
+        <Link route={'/'}>
+          <Button style={style} content='Back to Ideas' icon='left arrow' labelPosition='left' />
+        </Link>
+        <Divider />
+        <h3><Icon name="server" />Idea Details</h3>
+        <p>Everything you need to know about this idea</p>
+        <Divider />
         <Grid>
-
           <Grid.Row>
             <Grid.Column width={10}>
               {this.renderCards()}
             </Grid.Column>
-            <Grid.Column width={4}>
+            <Grid.Column width={6}>
               <Contribute address={this.props.address} />
             </Grid.Column>
           </Grid.Row>
@@ -80,12 +107,12 @@ class IdeaShow extends Component {
             <Grid.Column>
               <Link route={`/ideas/${this.props.address}/requests`}>
                 <a>
-                  <Button primary>View Requests</Button>
+                  <Button primary>Withdrawal Requests</Button>
                 </a>
               </Link>
             </Grid.Column>
           </Grid.Row>
-          
+
         </Grid>
       </Layout>
     );

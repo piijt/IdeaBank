@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import factory from '../ethereum/factory';
-import { Card, Button } from 'semantic-ui-react';
-import Layout from '../components/Layout';
-import {Link} from '../routes';
+import { Card, Button, Divider } from 'semantic-ui-react';
+import Layout from '../components/HOC/Layout';
+import Network from '../components/Wallet';
+import Modal from '../components/UI/Modal';
+import { Link } from '../routes';
+import NewIdea from './ideas/new';
 
 class Index extends Component {
     static async getInitialProps() { // skips initial rendering next attribute
@@ -15,7 +18,7 @@ class Index extends Component {
         return {
           header: address,
           description: (
-            <Link route={`/ideas/${address}`}> 
+            <Link route={`/ideas/${address}`}>
               <a>View Idea</a>
             </Link>
           ),
@@ -26,21 +29,17 @@ class Index extends Component {
     }
 
     render() {
+
+      const style = {
+        marginTop: "10px"
+      }
+
       return (
         <Layout>
           <div>
-            <h3>Enlisted Ideas</h3>
-              <Link route="/ideas/new">
-                <a>
-                  <Button
-                    floated="right"
-                    content="Enlist Idea"
-                    icon="add circle"
-                    primary
-                    />
-                </a>
-              </Link>
-
+            <Divider />
+            <NewIdea />
+            <p style={style}>Active ideas that has been deployed to the Idea ദank</p>
             {this.renderIdeas()}
           </div>
         </Layout>

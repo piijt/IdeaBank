@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { Form, Button, Message, Input } from 'semantic-ui-react';
+import { Form, Button, Message, Input, Divider } from 'semantic-ui-react';
 import Idea from '../../../ethereum/ideas';
 import web3 from '../../../ethereum/web3';
 import { Link, Router } from '../../../routes';
-import Layout from '../../../components/Layout';
+import Layout from '../../../components/HOC/Layout';
 
 class RequestNew extends Component {
   state = {
@@ -46,11 +46,10 @@ class RequestNew extends Component {
   render() {
     return(
       <Layout>
-      <Link route={`/ideas/${this.props.address}/requests`}>
-        <a>
-          Go Back
-        </a>
-      </Link>
+        <Link route={`/ideas/${this.props.address}/requests`}>
+          <Button content='Back to Requests' icon='left arrow' labelPosition='left' />
+        </Link>
+        <Divider />
       <h3>Help with this idea</h3>
         <Form onSubmit={this.onSubmit} error={!!this.state.errorMessage}>
 

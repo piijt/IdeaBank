@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import { Form, Button, Input, Message } from 'semantic-ui-react';
-import Layout from '../../components/Layout';
+import Layout from '../../components/HOC/Layout';
 import factory from '../../ethereum/factory';
 import web3 from '../../ethereum/web3';
+import Metamask from '../../ethereum/metamask';
 import { Router } from '../../routes';
+import { Link } from '../../routes';
 
 class NewIdea extends Component {
   state = {
