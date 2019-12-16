@@ -13,6 +13,8 @@ class Index extends Component {
       return {ideas};
     }
 
+
+
     renderIdeas() {
       const items = this.props.ideas.map(address => {
         return {
@@ -25,7 +27,7 @@ class Index extends Component {
           fluid: true
         };
       });
-      return <Card.Group items={items} />;
+      return <Card.Group items={items}/>;
     }
 
     render() {
@@ -33,6 +35,9 @@ class Index extends Component {
       const style = {
         marginTop: "10px"
       }
+
+
+
 
       return (
         <Layout>

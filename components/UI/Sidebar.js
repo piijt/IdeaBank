@@ -36,6 +36,10 @@ class LeftSidebar extends Component {
       visibility: "visible"
     }
 
+    const avoidOverLayfromCards = {
+      marginLeft: "100px"
+    }
+
     return(
         <Sidebar.Pushable style={styles}>
           <Sidebar
@@ -76,6 +80,7 @@ class LeftSidebar extends Component {
             </Segment>
           </Sidebar.Pusher>
         </Sidebar.Pushable>
+
     );
   }
 }
