@@ -16,7 +16,7 @@ class LeftSidebar extends Component {
       left: "0",
       top: "0",
       position: "absolute",
-      visibility: "visible"
+      visibility: "visible",
     }
 
     const none = {

@@ -36,12 +36,12 @@ class Index extends Component {
         marginTop: "10px"
       }
 
-
+      
 
 
       return (
         <Layout>
-          <div>
+          <div style={{left: "50%"}}>
             <Divider />
             <NewIdea />
             <p style={style}>Active ideas that has been deployed to the Idea ദank</p>
