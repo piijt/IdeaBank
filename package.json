@@ -12,6 +12,7 @@
     "node": "10.x",
     "npm": "6.9.0"
   },
+  "preinstall": "rm -rf node_modules/*/.git/",
   "main": "index.js",
   "scripts": {
     "test": "mocha",

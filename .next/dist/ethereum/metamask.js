@@ -38,6 +38,9 @@ var _Modal2 = _interopRequireDefault(_Modal);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var _jsxFileName = 'C:\\xampp\\htdocs\\Bachelor2019\\node-boilerplates\\IdeaBank\\ethereum\\metamask.js';
+
+
 var Metamask = function (_Component) {
   (0, _inherits3.default)(Metamask, _Component);
 
@@ -85,9 +88,20 @@ var Metamask = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      return _react2.default.createElement('div', null, _react2.default.createElement(_Modal2.default, null), 'metamask is installed');
+      return _react2.default.createElement('div', {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 23
+        }
+      }, _react2.default.createElement(_Modal2.default, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 24
+        }
+      }), 'metamask is installed');
     }
   }]);
 
   return Metamask;
 }(_react.Component);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImV0aGVyZXVtXFxtZXRhbWFzay5qcyJdLCJuYW1lcyI6WyJSZWFjdCIsIkNvbXBvbmVudCIsIk1vZGFsIiwiTWV0YW1hc2siLCJpc01ldGFtYXNrSW5zdGFsbGVkIiwid2luZG93IiwiZXRoZXJldW0iLCJ3ZWIzIiwicHJvdmlkZXIiLCJjdXJyZW50UHJvdmlkZXIiLCJjb25zb2xlIiwibG9nIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQSxBQUFPLEFBQVM7Ozs7QUFDaEIsQUFBTyxBQUFXOzs7Ozs7Ozs7SUFHWixBOzs7Ozs7Ozs7Ozs7Ozs7Z05BTUosQSwrRkFBc0IsbUJBQUE7VUFBQTtvRUFBQTtrQkFBQTsyQ0FBQTtpQkFDbEI7a0JBQUksT0FBTyxPQUFQLEFBQWMsYUFBZCxBQUEyQixlQUFnQixPQUFPLE9BQVAsQUFBYyxTQUE3RCxBQUFzRSxhQUFjLEFBQ3BGO0FBQ007QUFGOEUsMkJBRW5FLE9BQUEsQUFBTyxlQUFlLE9BQUEsQUFBTyxLQUZzQyxBQUVqQyxBQUNuRDs7d0JBQUEsQUFBUSxJQUFSLEFBQVksQUFDYjtBQUpDLHFCQUlLLEFBQ0w7d0JBQUEsQUFBUSxJQUFSLEFBQVksQUFDYjtBQVBtQjs7aUJBQUE7aUJBQUE7OEJBQUE7O0FBQUE7a0JBQUE7QTs7Ozs7d0NBSkYsQUFDbEI7QUFDRDs7Ozs2QkFZUSxBQUNQOzZCQUNFLGNBQUE7O29CQUFBO3NCQUFBLEFBQ0U7QUFERjtBQUFBLE9BQUEsa0JBQ0UsQUFBQzs7b0JBQUQ7c0JBREYsQUFDRTtBQUFBO0FBQUEsVUFGSixBQUNFLEFBS0g7Ozs7O0FBdkJvQixBIiwiZmlsZSI6Im1ldGFtYXNrLmpzIiwic291cmNlUm9vdCI6IkM6L3hhbXBwL2h0ZG9jcy9CYWNoZWxvcjIwMTkvbm9kZS1ib2lsZXJwbGF0ZXMvSWRlYUJhbmsifQ==
