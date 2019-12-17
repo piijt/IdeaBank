@@ -1,10 +1,15 @@
 {
   "name": "social-media",
   "version": "1.0.0",
-  "builds": [{ "src": "package.json", "use": "@now/next" }],
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@now/next"
+    }
+  ],
   "description": "Block Chain Social Media Running on the Ethereum test network",
   "engines": {
-    "node": "v10.16.2",
+    "node": "10.x",
     "npm": "6.9.0"
   },
   "main": "index.js",
@@ -12,7 +17,8 @@
     "test": "mocha",
     "dev": "node server.js",
     "build": "next build",
-    "start": "node server.js"
+    "start": "node server.js",
+    "postinstall": "next build",
   },
   "author": "Peter Jespersen",
   "license": "ISC",
