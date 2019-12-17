@@ -11,7 +11,7 @@
     "test": "mocha",
     "build": "next build",
     "dev": "node server.js",
-    "start": "next start -p ${PORT}",
+    "start": "NODE_ENV=production node server.js",
     "heroku-postbuild": "npm run next build"
   },
   "author": "Peter Jespersen",
