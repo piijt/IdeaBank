@@ -1,14 +1,14 @@
 {
-  "name": "Idea Bank",
+  "name": "IdeaBank",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "mocha",
-    "prestart": "next build",
+    "build": "next build",
     "dev": "node server.js",
     "start": "next start -p ${PORT}",
-    "postinstall": "next build"
+    "heroku-postbuild": "npm run build"
   },
   "author": "Peter Jespersen",
   "license": "ISC",
