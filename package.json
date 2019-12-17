@@ -6,8 +6,9 @@
 "main": "index.js",
 "scripts": {
   "test": "mocha",
+  "prestart": "next build",
   "dev": "node server.js",
-  "start": "node server.js",
+  "start": "next start -p ${PORT}",
   "postinstall": "next build"
 },
 "author": "Peter Jespersen",
