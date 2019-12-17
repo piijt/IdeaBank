@@ -18,7 +18,7 @@
     "dev": "node server.js",
     "build": "next build",
     "start": "node server.js",
-    "postinstall": "next build",
+    "postinstall": "next build"
   },
   "author": "Peter Jespersen",
   "license": "ISC",
