@@ -1,46 +1,31 @@
+
 {
-  "name": "social-media",
-  "version": "1.0.0",
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@now/next"
-    }
-  ],
-  "description": "Block Chain Social Media Running on the Ethereum test network",
-  "engines": {
-    "node": "10.x",
-    "npm": "6.9.0"
-  },
-  "preinstall": "rm -rf node_modules/*/.git/",
-  "main": "index.js",
-  "scripts": {
-    "test": "mocha",
-    "dev": "node server.js",
-    "build": "next build",
-    "start": "node server.js",
-    "postinstall": "next build"
-  },
-  "author": "Peter Jespersen",
-  "license": "ISC",
-  "dependencies": {
-    "@truffle/hdwallet-provider": "^1.0.25",
-    "cross-env": "^6.0.3",
-    "fs-extra": "^8.1.0",
-    "ganache-cli": "^6.7.0",
-    "mocha": "^6.2.2",
-    "next": "^4.2.3",
-    "next-images": "^1.2.0",
-    "next-routes": "^1.4.2",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-icons": "^3.8.0",
-    "semantic-ui-css": "^2.4.1",
-    "semantic-ui-react": "^0.88.2",
-    "solc": "^0.4.25",
-    "web3": "^1.0.0-beta.37"
-  },
-  "devDependencies": {
-    "gh-pages": "^2.1.1"
-  }
+"name": "Idea Bank",
+"version": "1.0.0",
+"description": "",
+"main": "index.js",
+"scripts": {
+  "test": "mocha",
+  "dev": "node server.js",
+  "start": "node server.js",
+  "postinstall": "next build"
+},
+"author": "",
+"license": "ISC",
+"dependencies": {
+  "ajv": "^5.5.2",
+  "fs": "0.0.1-security",
+  "fs-extra": "^7.0.1",
+  "ganache-cli": "^6.4.3",
+  "mocha": "^6.1.4",
+  "next": "^4.1.4",
+  "next-routes": "^1.4.2",
+  "react": "^16.8.6",
+  "react-dom": "^16.8.6",
+  "semantic-ui-css": "^2.4.1",
+  "semantic-ui-react": "^0.86.0",
+  "solc": "^0.4.25",
+  "truffle-hdwallet-provider": "^1.0.7",
+  "web3": "^1.0.0-beta.37"
+}
 }
