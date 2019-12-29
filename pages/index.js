@@ -7,13 +7,12 @@ import Modal from '../components/UI/Modal';
 import { Link } from '../routes';
 import NewIdea from './ideas/new';
 
+
 class Index extends Component {
     static async getInitialProps() { // skips initial rendering next attribute
       const ideas = await factory.methods.getDeployedCampaigns().call();
       return {ideas};
     }
-
-
 
     renderIdeas() {
       const items = this.props.ideas.map(address => {
@@ -31,17 +30,12 @@ class Index extends Component {
     }
 
     render() {
-
       const style = {
         marginTop: "10px"
       }
-
-      
-
-
       return (
         <Layout>
-          <div style={{left: "50%"}}>
+          <div>
             <Divider />
             <NewIdea />
             <p style={style}>Active ideas that has been deployed to the Idea ദank</p>

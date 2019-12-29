@@ -19,11 +19,6 @@ class LeftSidebar extends Component {
       visibility: "visible",
     }
 
-    const none = {
-      visibility: "hidden"
-    }
-
-
     const Metamask = {
       position: "relative",
       display: "inline-block",
@@ -36,12 +31,12 @@ class LeftSidebar extends Component {
       visibility: "visible"
     }
 
-    const avoidOverLayfromCards = {
+    const divider = {
       marginLeft: "100px"
     }
 
-    return(
-        <Sidebar.Pushable style={styles}>
+    return (
+        <div style={divider}>
           <Sidebar
             as={Menu}
             animation='overlay'
@@ -51,36 +46,44 @@ class LeftSidebar extends Component {
             visible
             width='thick'
           >
+
           <Link route="/">
             <Menu.Item as='a'>
               <Icon name='home' />
-              Ideaദank
             </Menu.Item>
-            </Link>
+          </Link>
+
           <Link route="/ideas/new">
             <Menu.Item as='a'>
             <Icon name='plus' />
-            New Idea
+            </Menu.Item>
+          </Link>
+
+          <Link route="/promotion/index">
+            <Menu.Item as='a'>
+            <Icon name='feed' />
+            </Menu.Item>
+          </Link>
+
+          <Link route="/user/index">
+            <Menu.Item as='a'>
+            <Icon name='user' />
             </Menu.Item>
           </Link>
 
           <Menu.Item as='a'>
             <Wallet />
           </Menu.Item>
-          <div style={Metamask}>
-            <img height="50px" width="50px" src="../../static/metamask.png" alt="Metamask" />
-            <div>
-              <MetamaskModal />
-            </div>
-          </div>
-          </Sidebar>
-          <Sidebar.Pusher styles={none}>
-            <Segment style={none}  basic>
-              <Header style={none} as='h3'>Application Content</Header>
-            </Segment>
-          </Sidebar.Pusher>
-        </Sidebar.Pushable>
 
+            <div style={Metamask}>
+              <img height="50px" width="50px" src="../../static/metamask.png" alt="Metamask" />
+              <div>
+                <MetamaskModal />
+              </div>
+            </div>
+
+          </Sidebar>
+        </div>
     );
   }
 }
