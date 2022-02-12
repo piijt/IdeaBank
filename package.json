@@ -17,7 +17,7 @@
   "license": "ISC",
   "dependencies": {
     "@truffle/hdwallet-provider": "^1.0.25",
-    "ajv": "^5.5.2",
+    "ajv": "^6.12.3",
     "cross-env": "^6.0.3",
     "fs": "0.0.1-security",
     "fs-extra": "^7.0.1",
